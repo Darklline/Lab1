@@ -1,14 +1,14 @@
 class StatisticsApp
 {
-    data1Input: HTMLInputElement;
-    data2Input: HTMLInputElement;
-    data3Input: HTMLInputElement;
-    data4Input: HTMLInputElement;
+    data1Input!: HTMLInputElement;
+    data2Input!: HTMLInputElement;
+    data3Input!: HTMLInputElement;
+    data4Input!: HTMLInputElement;
 
-    sum1Input: HTMLInputElement;
-    avgInput: HTMLInputElement;
-    minInput: HTMLInputElement;
-    maxInput: HTMLInputElement;
+    sum1Input!: HTMLInputElement;
+    avgInput!: HTMLInputElement;
+    minInput!: HTMLInputElement;
+    maxInput!: HTMLInputElement;
 
     constructor()
     {
@@ -31,15 +31,15 @@ class StatisticsApp
 
     getInputs() 
     {
-        this.data1Input = document.querySelector('#data1');
-        this.data2Input = document.querySelector('#data2');
-        this.data3Input = document.querySelector('#data3');
-        this.data4Input = document.querySelector('#data4');
+        this.data1Input = document.querySelector('#data1') as HTMLInputElement;
+        this.data2Input = document.querySelector('#data2') as HTMLInputElement;
+        this.data3Input = document.querySelector('#data3') as HTMLInputElement;
+        this.data4Input = document.querySelector('#data4') as HTMLInputElement;
 
-        this.sum1Input = document.querySelector('#sum');
-        this.avgInput = document.querySelector('#avg');
-        this.minInput = document.querySelector('#min');
-        this.maxInput = document.querySelector('#max');
+        this.sum1Input = document.querySelector('#sum') as HTMLInputElement;
+        this.avgInput = document.querySelector('#avg') as HTMLInputElement;
+        this.minInput = document.querySelector('#min') as HTMLInputElement;
+        this.maxInput = document.querySelector('#max') as HTMLInputElement;
     }
 
     getValue(element : HTMLInputElement) : number {
