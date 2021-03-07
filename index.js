@@ -1,19 +1,20 @@
-var StatisticsApp = /** @class */ (function () {
-    function StatisticsApp() {
+"use strict";
+class StatisticsApp {
+    constructor() {
+        console.log(this);
         this.startApp();
     }
-    StatisticsApp.prototype.startApp = function () {
+    startApp() {
         this.getInputs();
         this.inputsObserver();
-    };
-    StatisticsApp.prototype.inputsObserver = function () {
-        var _this = this;
-        this.data1Input.addEventListener("input", function () { return _this.getStatistics(); });
-        this.data1Input.addEventListener("input", function () { return _this.getStatistics(); });
-        this.data1Input.addEventListener("input", function () { return _this.getStatistics(); });
-        this.data1Input.addEventListener("input", function () { return _this.getStatistics(); });
-    };
-    StatisticsApp.prototype.getInputs = function () {
+    }
+    inputsObserver() {
+        this.data1Input.addEventListener("input", () => this.getStatistics());
+        this.data2Input.addEventListener("input", () => this.getStatistics());
+        this.data3Input.addEventListener("input", () => this.getStatistics());
+        this.data4Input.addEventListener("input", () => this.getStatistics());
+    }
+    getInputs() {
         this.data1Input = document.querySelector('#data1');
         this.data2Input = document.querySelector('#data2');
         this.data3Input = document.querySelector('#data3');
@@ -22,30 +23,31 @@ var StatisticsApp = /** @class */ (function () {
         this.avgInput = document.querySelector('#avg');
         this.minInput = document.querySelector('#min');
         this.maxInput = document.querySelector('#max');
-    };
-    StatisticsApp.prototype.getValue = function (element) {
-        var value = element.value;
-        return Number.isInteger(value) ? parseInt(value) : 0;
-    };
-    StatisticsApp.prototype.setValue = function (element, value) {
+    }
+    getValue(element) {
+        const { value } = element;
+        const intValue = parseInt(value);
+        return intValue !== NaN ? intValue : 0;
+    }
+    setValue(element, value) {
         element.value = value;
-    };
-    StatisticsApp.prototype.getStatistics = function () {
-        var data1 = this.getValue(this.data1Input);
-        var data2 = this.getValue(this.data2Input);
-        var data3 = this.getValue(this.data3Input);
-        var data4 = this.getValue(this.data4Input);
-        var sum = data1 + data2 + data3 + data4;
-        var avg = sum / 4;
-        var min = Math.min(data1, data2, data3, data4);
-        var max = Math.max(data1, data2, data3, data4);
+    }
+    getStatistics() {
+        const data1 = this.getValue(this.data1Input);
+        const data2 = this.getValue(this.data2Input);
+        const data3 = this.getValue(this.data3Input);
+        const data4 = this.getValue(this.data4Input);
+        const sum = data1 + data2 + data3 + data4;
+        const avg = sum / 4;
+        const min = Math.min(data1, data2, data3, data4);
+        const max = Math.max(data1, data2, data3, data4);
         this.showStatistics(sum, avg, min, max);
-    };
-    StatisticsApp.prototype.showStatistics = function (sum, avg, min, max) {
+    }
+    showStatistics(sum, avg, min, max) {
         this.setValue(this.sum1Input, sum.toString());
         this.setValue(this.avgInput, avg.toString());
         this.setValue(this.minInput, min.toString());
         this.setValue(this.maxInput, max.toString());
-    };
-    return StatisticsApp;
-}());
+    }
+}
+const app = new StatisticsApp();

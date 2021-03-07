@@ -12,6 +12,7 @@ class StatisticsApp
 
     constructor()
     {
+        console.log(this);
         this.startApp();
     }
 
@@ -24,9 +25,9 @@ class StatisticsApp
     inputsObserver() 
     {
         this.data1Input.addEventListener("input", () => this.getStatistics());
-        this.data1Input.addEventListener("input", () => this.getStatistics());
-        this.data1Input.addEventListener("input", () => this.getStatistics());
-        this.data1Input.addEventListener("input", () => this.getStatistics());
+        this.data2Input.addEventListener("input", () => this.getStatistics());
+        this.data3Input.addEventListener("input", () => this.getStatistics());
+        this.data4Input.addEventListener("input", () => this.getStatistics());
     }
 
     getInputs() 
@@ -42,10 +43,13 @@ class StatisticsApp
         this.maxInput = document.querySelector('#max') as HTMLInputElement;
     }
 
-    getValue(element : HTMLInputElement) : number {
-        const {value} = element;
-        return Number.isInteger(value) ? parseInt(value) : 0;
-    }
+    getValue(element: HTMLInputElement): number 
+    {​​
+        const {​​ value }​​ = element;
+        const intValue = parseInt(value);
+    
+        return intValue !== NaN ? intValue : 0;
+    }​​
 
     setValue(element : HTMLInputElement, value: string)
     {
@@ -75,3 +79,5 @@ class StatisticsApp
         this.setValue(this.maxInput, max.toString());
     }
 }
+
+const app = new StatisticsApp();
