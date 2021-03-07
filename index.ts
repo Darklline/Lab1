@@ -47,6 +47,11 @@ class StatisticsApp
         return Number.isInteger(value) ? parseInt(value) : 0;
     }
 
+    setValue(element : HTMLInputElement, value: string)
+    {
+        element.value = value;
+    }
+
     getStatistics()
     {
         const data1 = this.getValue(this.data1Input);
@@ -58,5 +63,13 @@ class StatisticsApp
         const avg = sum / 4;
         const min = Math.min(data1, data2, data3, data4);
         const max = Math.max(data1, data2, data3, data4);
+    }
+
+    showStatistics(sum: number, avg: number, min: number, max: number)
+    {
+        this.setValue(this.sum1Input, sum.toString());
+        this.setValue(this.avgInput, avg.toString());
+        this.setValue(this.minInput, min.toString());
+        this.setValue(this.maxInput, max.toString());
     }
 }
