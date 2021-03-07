@@ -63,6 +63,8 @@ class StatisticsApp
         const avg = sum / 4;
         const min = Math.min(data1, data2, data3, data4);
         const max = Math.max(data1, data2, data3, data4);
+
+        this.showStatistics(sum, avg, min, max);
     }
 
     showStatistics(sum: number, avg: number, min: number, max: number)
