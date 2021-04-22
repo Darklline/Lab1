@@ -1,0 +1,28 @@
+.keyContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.audioKey {
+  margin: 10px;
+  display: grid;
+  place-items: center;
+  background-color: pink;
+  color: black;
+  font-size: 42px;
+  font-weight: bold;
+  width: 100px;
+  height: 100px;
+}
+
+button {
+  margin: 10px;
+  background-color: rgb(145, 40, 70);
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  width: 120px;
+  border-radius: 5px;
+  cursor: pointer;
+}

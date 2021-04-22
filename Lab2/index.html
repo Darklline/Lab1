@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Drum Kit</title>
+</head>
+<body>
+  <div class="keyContainer">
+    <div class="audioKey" data-key='q' >Q</div>
+    <div class="audioKey" data-key='w' >W</div>
+    <div class="audioKey" data-key='e' >E</div>
+    <div class="audioKey" data-key='r' >R</div>
+    <div class="audioKey" data-key='t' >T</div>
+    <div class="audioKey" data-key='a' >A</div>
+    <div class="audioKey" data-key='s' >S</div>
+    <div class="audioKey" data-key='d' >D</div>
+    <div class="audioKey" data-key='f' >F</div>
+</div>
+  <audio  src="sounds/clap.wav"  data-sound-key="q"></audio>
+  <audio  src="sounds/boom.wav"  data-sound-key="w"></audio>
+  <audio  src="sounds/hihat.wav"  data-sound-key="e"></audio>
+  <audio  src="sounds/kick.wav"  data-sound-key="r"></audio>
+  <audio  src="sounds/openhat.wav"  data-sound-key="a"></audio>
+  <audio  src="sounds/ride.wav"  data-sound-key="s"></audio>
+  <audio  src="sounds/snare.wav"  data-sound-key="d"></audio>
+  <audio  src="sounds/tink.wav"  data-sound-key="f"></audio>
+  <audio  src="sounds/tom.wav"  data-sound-key="t"></audio>
+  
+  <div class="channels">
+
+    <div class="channelButtons" data-channel="channel-1">
+      <button class="record">
+        Record
+      </button>
+      <button class="play">
+       Play
+      </button>
+    </div>
+
+    <div class="channelButtons" data-channel="channel-2">
+      <button class="record">
+        Record
+      </button>
+      <button class="play">
+       Play
+      </button>
+    </div>
+
+  </div>
+  
+  <script src="./index.js"></script>
+</body>
+</html>
