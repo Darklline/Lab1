@@ -29,19 +29,19 @@ class SoundPlayer {
     addEventListeners() {
         window.addEventListener('keydown', e => this.handleKeyEvent(e));
 
-        this.dataChannels.forEach(el =>
-            el.addEventListener('click', e => this.handleChannelClick(e)),
+        this.dataChannels.forEach(channel =>
+            channel.addEventListener('click', e => this.handleChannelClick(e)),
         );
     }
 
     handleKeyEvent(e: KeyboardEvent) {
         const { key, timeStamp: time } = e;
 
-        if (this.activeChannels.size) {
+        if (this.activeChannels.size) 
+        {
             this.activeChannels.forEach(channelId => {
-                this.channelContainer[channelId] = [
-                    ...this.channelContainer[channelId],
-                    { key, time },
+                this.channelContainer[channelId] = [...this.channelContainer[channelId],
+                { key, time },
                 ];
             });
         }
@@ -86,14 +86,6 @@ class SoundPlayer {
         this.changeRecordButtonText(channelId, 'Stop');
     }
 
-    changeRecordButtonText(channelId: string, text: string) {
-        const recordButton = (this.dataChannels.find(
-            ({ dataset }) => dataset.channel === channelId,
-        ) as HTMLDivElement).firstElementChild as HTMLButtonElement;
-
-        recordButton.textContent = text;
-    }
-
     isChannelActive(channelId: string) {
         const isActive = this.activeChannels.has(channelId);
 
@@ -106,6 +98,16 @@ class SoundPlayer {
 
         return false;
     }
+
+    changeRecordButtonText(channelId: string, text: string) {
+        const recordButton = (this.dataChannels.find(
+            ({ dataset }) => dataset.channel === channelId,
+        ) as HTMLDivElement).firstElementChild as HTMLButtonElement;
+
+        recordButton.textContent = text;
+    }
+
+
 }
 
 const sp = new SoundPlayer();
