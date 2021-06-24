@@ -1,0 +1,71 @@
+body {
+  background-color: wheat;
+
+  height: 100vh;
+}
+
+.cityForm {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  & input {
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-right: 1rem;
+  }
+
+  & button {
+    height: 3em;
+    width: 5rem;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: pink;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+.container {
+  padding: 1rem;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.city {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem;
+  &__cityname {
+    margin: 0.5rem 0;
+    font-size: 24px;
+  }
+  &__optional {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+  &__pressure p {
+    margin: 0.5rem 0;
+  }
+  &__clouds {
+    font-size: 16px;
+    margin: 0.5rem 0;
+  }
+  &__temp {
+    margin-right: 0.5rem;
+  }
+}
