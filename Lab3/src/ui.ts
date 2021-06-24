@@ -12,25 +12,19 @@ export class Ui {
         buttonAdd.addEventListener('click', async (ev: Event) => {
             const inputS = <HTMLInputElement>document.getElementById('SearchI');
             const addIn = inputS.value.toLowerCase();
-            if ((addIn === "") || (this.checkCityName(addIn)) || (addIn === "null") || (addIn === null) || (addIn === undefined)) { }
-            else {
-                await this.customWind(addIn);
-                inputS.value = "";
-            }
+            await this.customWind(addIn);
+            inputS.value = "";
         });
 
         const inputSearch = document.getElementById("SearchI");
         inputSearch.addEventListener("keydown", async (e) => {
             const inputS = <HTMLInputElement>document.getElementById('SearchI');
             const addIn = inputS.value;
-            if ((addIn === "") || (this.checkCityName(addIn)) || (addIn === "null") || (addIn === null) || (addIn === undefined)) { }
-            else {
                 if (e.key === 'Enter') {
                     await this.customWind(addIn);
                     //console.log(addIn);
                     inputS.value = "";
                 }
-            }
         })
     }
 
@@ -71,11 +65,7 @@ export class Ui {
             let getDel = JSON.parse(localStorage.getItem('weather'));
             const tablica: any[] = [];
             getDel.map((x: any) => {
-                if (x === btnId) {
-
-                } else {
                     tablica.push(x);
-                }
             })
             if (localStorage.getItem('weather').length >= 1) {
                 localStorage.setItem('weather', JSON.stringify(tablica));
