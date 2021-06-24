@@ -1,0 +1,141 @@
+body {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  background-color: rgb(4, 42, 74);
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.titleDiv {
+  font-family: 'Gloria Hallelujah', cursive;
+  background-color: rgba(169, 169, 169, 0.3);
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 48px;
+  color: yellow;
+  padding: 20px;
+}
+
+.nav-section {
+  position: absolute;
+  left: 0;
+  top: 200px;
+  width: 250px;
+  background-color: rgba(169, 169, 169, 0.3);
+  padding: 0.5em;
+}
+
+.nav-input-search {
+  height: 5.5ch;
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: rgb(4, 42, 74);
+  color: white;
+  border: none;
+}
+.nav-btn-search {
+  font-family: 'arial';
+  width: 13ch;
+  height: 6ch;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: rgb(4, 42, 74);
+  color: white;
+  padding: 2px;
+  margin-left: 5px;
+  border: none;
+}
+
+.nav-btn-menu {
+  font-family: 'arial';
+  width: 250px;
+  height: 40px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  background-color: rgb(4, 42, 74);
+  color: white;
+  border: none;
+}
+
+.input-section {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 2;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin: auto;
+  padding: 20px;
+}
+
+.input-AddNote {
+  width: 50ch;
+  height: 5ch;
+  text-align: center;
+  background-color: rgb(4, 42, 74);
+  color: white;
+  border: 0.2px solid grey;
+}
+
+.input-AddButton {
+  width: 10ch;
+  height: 5ch;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.6rem;
+  background-color: rgb(4, 42, 74);
+  color: white;
+  border: 0.2px solid grey;
+  padding: 2px;
+  margin: 10px auto 10px auto;
+}
+
+.tmp-content {
+  width: 50ch;
+  height: 15ch;
+  text-align: center;
+  background-color: rgb(9, 50, 83);
+  color: white;
+  border: 0.2px solid grey;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: relative;
+  width: 960px;
+  margin: auto;
+}
+
+.noteWind {
+  width: 250px;
+  height: 20ch;
+  text-align: center;
+  background-color: rgb(9, 50, 83);
+  color: white;
+  border: 0.2px solid grey;
+  margin: 20px;
+
+  h1 {
+    background-color: rgba(169, 169, 169, 0.3);
+    font-size: 1rem;
+    margin: 0;
+    padding: 10px;
+    height: 20%;
+  }
+  h2 {
+    font-size: 0.9rem;
+  }
+  h3 {
+    font-size: 0.7rem;
+  }
+}

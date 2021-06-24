@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StickyNotes</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="titleDiv">StickyNotes</div>
+  <section class="nav-section">
+    <input class="nav-input-search" type="text" id="SearchNote" placeholder="Szukaj notatki" />
+    <button class="nav-btn-search">Szukaj</button>
+    <button class="nav-btn-menu">Notatki</button>
+    <button class="nav-btn-menu">Przypomnienia</button>
+    <button class="nav-btn-menu">Archiwum</button>
+    <button class="nav-btn-menu">Kosz</button>
+  </section>
+  <section class="input-section">
+    <input class="input-AddNote" type="text" id="AddNote" placeholder="Utwórz notatkę..." />
+    <input class="tmp-content" type="text" id="content" />
+    <button class="input-AddButton" id="AddButton">Dodaj</button>
+  </section>
+  <div class="container" id="container"></div>
+  <div class="lista" id="lista"></div>
+  <script src="index.js"></script>
+</body>
+
+</html>
